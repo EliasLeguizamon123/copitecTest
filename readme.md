@@ -19,10 +19,12 @@
 
       .HTML
       .CSS
+        |-> .Flexbox Grid
+        |-> .Animate CSS
       .JS
-      .JQuery
+      |->JQuery
           |-> .Bootstrap V4
-
+          |-> .Parallax JS
       -Creator
       --------
 

@@ -5,6 +5,8 @@
     <title>COPITEC</title>
     <!--CSS link-->
     <link rel="stylesheet" href="./css/master.css">
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!--JS Link-->
     <script src="./js/master.js"></script>
     <!--Bootstrap 4 Link-->
@@ -16,12 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <!--PARALLAX JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
   </head>
   <body>
     <!--Sección Menú Hamburguesa-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top col-xs">
-      <a class="navbar-brand" href="#"><img src="./source/copitec1.png" style="width: 39px; height: 39px; ">COPITEC</a>
+      <a class="navbar-brand" href="#"><img src="./source/copitec1.png" style="width: 60px; height: 60px; ">COPITEC</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,36 +34,38 @@
             <a class="nav-link" href="#" onclick="irArriba()">Inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Institucional</a>
+            <a class="nav-link" href="institucional.html">Institucional</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ¿Matriculado?
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" target="_blank" href="https://mail.copitec.org.ar/horde/">WebMail</a>
+              <a class="dropdown-item" target="_blank" href="https://ce.copitec.org.ar">Sistema Encomienda Digital</a>
+              <a class="dropdown-item" onclick="enConstruccion()" href="#">Honorario Profesional Indicativo</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sistema de encomiendas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">WebMail</a>
+            <a class="nav-link disabled" onclick="enConstruccion()" href="#" tabindex="-1" aria-disabled="true">¿Cómo Matricularse?</a>
           </li>
         </ul>
       </div>
       <span class="col-xs-offset-3 telText">
-        Tel/Fax: 4343-8407/8423
+        <a target="_blank" href="https://www.facebook.com/CopitecOficial/"> <img src="./source/facebook.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a target="_blank" href="https://twitter.com/COPITEC"> <img src="./source/twitter.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a target="_blank" href="https://www.youtube.com/user/copitecvideo"> <img src="./source/youtube.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a onclick="enConstruccion()" href="#"> <img src="./source/linkedin.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
       </span>
     </nav>
     <!--Sección HERO-->
     <section class="hero">
-        <div class="hero-inner">
-            <h1>Consejo Profesional de Ingenieria de Telecomunicaciones, Electrónica y Computación</h1>
-            <h2>Horarios de atención:</h2>
-            <h2>Lunes a viernes de 9:30 a 16:30 hs</h2>
+        <div class="hero-innen">
+            <h1 class="animated fadeIn slow">Consejo Profesional de Ingenieria de Telecomunicaciones, Electrónica y Computación</h1>
+            <h2 class="animated slideInUp slower">Horarios de atención:</h2>
+            <h2 class="animated slideInUp slower">Lunes a viernes de 9:30 a 16:30 hs</h2>
         </div>
     </section>
-    <!--Sección Redes sociales-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-xs">
-      <div class="col center-xs redes">
-        <a href="#"> <img src="./source/facebook.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
-        <a href="#"> <img src="./source/twitter.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
-        <a href="#"> <img src="./source/youtube.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
-        <a href="#"> <img src="./source/linkedin.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
-      </div>
     </nav>
     <!--Sección de ¿Por qué matricularse?-->
     <div class="nosotros orange" id="nosotros">
@@ -84,25 +88,62 @@
     		<div class="col-md-12 ">
     			<h1>Noticias</h1>
     		</div>
-    	</div>
-    	<div class="row images ">
-    		<div class="col-md-3 cajasNoticias">
-    			<h3>Flash send</h3>
-    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
-    		</div>
-    		<div class="col-md-3 cajasNoticias">
-    			<h3>Care of the planet</h3>
-    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
-    		</div>
-    		<div class="col-md-3 cajasNoticias">
-    			<h3>Our Merch</h3>
-    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
-    		</div>
-    		<div class="col-md-3 cajasNoticias">
-    			<h3>Recicle</h3>
-    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
-    		</div>
-    	</div>
+        <div class="row">
+  <div class="col-sm-6">
+    <div class="card border-primary">
+      <div class="card-body text-dark">
+        <h5 class="card-title">FORMAS DE PAGO</h5>
+        <p class="card-text">
+          Se informa a toda la matrícula que por resolución general
+          nº 2681 artículo 21 Inciso c) de la Administración Federal de Ingresos Públicos, ...
+        </p>
+        <a href="#" onclick="enConstruccion()" class="btn btn-outline-primary">Leer más -></a>
+      </div>
     </div>
+      </div>
+        <div class="col-sm-6">
+          <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">NOVEDADES ENACOM</h5>
+                <p class="card-text">
+                  Nos comunicamos para informarles que el 28 de abril del
+                  corriente año se han cumplido 3 años de la entrada en vigencia de la Resolución ...
+                </p>
+                <a href="#" onclick="enConstruccion()" class="btn btn-outline-primary">Leer más -></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+        </div>
+      </div>
+    <!--Sección MAPA-->
+    <div class="container center-xs servicios">
+      <h1>¿Donde estamos?</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.593180265893!2d-58.37657138518546!3d-34.61444736557209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad57661396b%3A0xa5a586826e2ddbc6!2sPer%C3%BA%20562%2C%20C1068AAB%20CABA!5e0!3m2!1ses!2sar!4v1582032150315!5m2!1ses!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <!--Sección FOOTER-->
+    <div >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-xs footer" style="background-color: #A9A9A9;">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="./source/copitec.png" style="width: 120px; height: 160px;">
+          </div>
+          <div class="col-xs-8">
+            <p>
+              Consejo Profesional de Ingenieria de Telecomunicaciones, Electrónica y Computación
+            </p>
+            <p style="font-weight: bold;"> Contacto: Tel/Fax: 4343-8407/8423</p>
+            <p style="font-weight: bold;">Desde el interior: 0810-777-2674832 (COPITEC)</p>
+            <p style="font-weight: bold;">Horario de Atención:  Lun a Vie de 9:30 hs a 16:30 hs</p>
+            <p style="font-weight: bold;">Horario de Caja: 10:00 hs a 16:00 hs</p>
+          </div>
+          <div class="col-xs-1">
+            <a target="_blank" href="http://qr.afip.gob.ar/?qr=4BRor2AQd7nl1nO9fiHsGw,,"><img src="./source/DATAWEB.png" alt=""></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
   </body>
 </html>

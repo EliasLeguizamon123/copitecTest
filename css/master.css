@@ -29,12 +29,13 @@ body{
     margin-top: 0;
     margin-bottom: 0.5em;
     color: white;
+    opacity: 0;
 }
 .hero h2{
   color: white;
 }
 .nosotros{
-	width: 100%;
+	width: 100vw;
 	height: auto;
 	text-align: center;
 	padding-top: 40px;
@@ -61,6 +62,12 @@ body{
 .servicios h1{
 	color: #666;
 	font-weight: 100;
+  font-weight: 500;
+}
+.servicios h2{
+	color: #666;
+	font-weight: 100;
+
 }
 .servicios .images{
 	padding-top: 30px;
@@ -70,4 +77,14 @@ body{
 }
 .cajasNoticias{
   border-radius: black 3px outset;
+}
+.footer{
+  color: #A9A9A9;
+  background-color: #A9A9A9;
+}
+.institucional-body{
+  padding-top: 5em;
+}
+.institucional .h1{
+  padding-top: 5em;
 }
