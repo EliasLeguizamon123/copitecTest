@@ -15,29 +15,38 @@
     <!--Flexbox Grid Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <!--PARALLAX JS-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="index.html">
-      <img src="./source/copitec2.png" width="30" height="30" class="d-inline-block align-top">
-      COPITEC
-    </a>
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link " href="#" onclick="irArriba()">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link " href="#">Institucional<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link " href="#">Sistema de encomiendas<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link " href="#">WebMail<span class="sr-only">(current)</span></a>
-      </li>
+    <!--Sección Menú Hamburguesa-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top col-xs">
+      <a class="navbar-brand" href="#"><img src="./source/copitec1.png" style="width: 39px; height: 39px; ">COPITEC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Sección Que se colapsa en moviles-->
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="irArriba()">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Institucional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sistema de encomiendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">WebMail</a>
+          </li>
+        </ul>
+      </div>
+      <span class="col-xs-offset-3 telText">
+        Tel/Fax: 4343-8407/8423
+      </span>
     </nav>
-    <!--Codigo HERO-->
+    <!--Sección HERO-->
     <section class="hero">
         <div class="hero-inner">
             <h1>Consejo Profesional de Ingenieria de Telecomunicaciones, Electrónica y Computación</h1>
@@ -45,9 +54,54 @@
             <h2>Lunes a viernes de 9:30 a 16:30 hs</h2>
         </div>
     </section>
+    <!--Sección Redes sociales-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-xs">
+      <div class="col center-xs redes">
+        <a href="#"> <img src="./source/facebook.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a href="#"> <img src="./source/twitter.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a href="#"> <img src="./source/youtube.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+        <a href="#"> <img src="./source/linkedin.svg" alt="" style="width: 30px; height: 30px; margin: 10px;"> </a>
+      </div>
+    </nav>
+    <!--Sección de ¿Por qué matricularse?-->
     <div class="nosotros orange" id="nosotros">
-    	<div class="container">
-    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="container">
+        <h1>¿Por Qué Matricularse?</h1>
+        <p style="justify;">
+          Porque todo profesional de la ingeniería al recibirse no sólo adquiere el derecho irrenunciable de ejercer su profesión, sino también las obligaciones que su título le confiere en función de lo que su actuación profesional implica para la sociedad, entre ellas el cumplimiento de las normativas legales como la obligación de matricularse para estar habilitado ejercer su profesión.
+        </p>
+        <p style="justify">
+          Para responder al compromiso de actuar en beneficio de los intereses de la comunidad, que contribuyó a su formación profesional, que delega el juzgamiento del comportamiento ético en sus propios profesionales a través de la regulación y control de su actividad.
+        </p>
+        <p style="justify">
+          Para acreditar una matrícula habilitante para actuar en el campo profesional, participando ilimitadamente en el usufructo profesional de los beneficios de la era de la información y de la infraestructura global de las telecomunicaciones.
+        </p>
+      </div>
+    </div>
+    <!--Sección Noticias-->
+    <div class="container servicios" id="servicios">
+    	<div class="row">
+    		<div class="col-md-12 ">
+    			<h1>Noticias</h1>
+    		</div>
+    	</div>
+    	<div class="row images ">
+    		<div class="col-md-3 cajasNoticias">
+    			<h3>Flash send</h3>
+    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
+    		</div>
+    		<div class="col-md-3 cajasNoticias">
+    			<h3>Care of the planet</h3>
+    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
+    		</div>
+    		<div class="col-md-3 cajasNoticias">
+    			<h3>Our Merch</h3>
+    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
+    		</div>
+    		<div class="col-md-3 cajasNoticias">
+    			<h3>Recicle</h3>
+    			<p>Start Bootstrap has everything you need to get your new website up and running in no time!</p>
+    		</div>
     	</div>
     </div>
   </body>

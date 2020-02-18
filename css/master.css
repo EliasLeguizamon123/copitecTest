@@ -35,7 +35,39 @@ body{
 }
 .nosotros{
 	width: 100%;
-	height: 50vh;
+	height: auto;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://www.key.com/kco/images/Banner_Professional_Services.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+.telText{
+  color: blue;
+}
+.servicios{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.servicios img{
+	width: 40%;
+	text-align: center;
+}
+.servicios h1{
+	color: #666;
+	font-weight: 100;
+}
+.servicios .images{
+	padding-top: 30px;
+}
+.images .col-md-3{
+	padding-top: 20px;
+}
+.cajasNoticias{
+  border-radius: black 3px outset;
 }
